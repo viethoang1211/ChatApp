@@ -25,6 +25,7 @@
             android:textSize="@dimen/_18ssp"
             android:textColor="@color/primary_text"/>
         <FrameLayout
+            android:id="@+id/layoutImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_20sdp">
@@ -37,6 +38,7 @@
                 android:scaleType="centerCrop"
                 app:riv_oval="true"/>
             <TextView
+                android:id="@+id/textAddImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -114,20 +116,38 @@
             android:textColor="@color/primary_text"
             android:textSize="@dimen/_13ssp"/>
 
+
         <!--sign up button-->
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonSignUp"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_50sdp"
-            android:text="@string/sign_up"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            app:cornerRadius="@dimen/_8sdp"
-            android:textSize="@dimen/_13ssp"
-            android:layout_marginTop="@dimen/_16sdp"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:animateLayoutChanges="true">
 
-        <!--sign up button-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:text="@string/sign_up"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:cornerRadius="@dimen/_8sdp"
+                android:textSize="@dimen/_13ssp"
+                />
+            
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center"
+                android:visibility="invisible"/>
+            
+        </FrameLayout>
+
+
+
+
 
         <TextView
             android:id="@+id/textSignIn"
@@ -138,5 +158,6 @@
             android:textColor="@color/primary"
             android:text="@string/sign_in"
             android:textStyle="bold" />
+
     </LinearLayout>
 </ScrollView>
